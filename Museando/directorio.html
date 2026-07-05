@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museando | Directorio )</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+
+    <header>
+        <a href="index.html" class="logo">MUSEANDO</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="rutas.html">Rutas</a></li>
+            <li><a href="directorio.html" class="activo-nav">Directorio</a></li>
+            <li><a href="guia.html">Cómo Moverte</a></li>
+            <li><a href="kit.html">Tu Kit</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1 style="margin-bottom: 10px;">Directorio de Museos</h1>
+        <p style="margin-bottom: 40px;">Haz clic en cada museo para explorar sus horarios, accesos y la galería de exploración.</p>
+
+        <div class="grid-flex-directorio">
+            
+			 <article class="museo-card" id="san-ildefonso" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/idelfonso1.jpg" alt="Colegio de San Ildefonso" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Colegio de San Ildefonso</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/P8zBPxmnmTjQZTKR9" target="_blank" class="link-mapa">Justo Sierra #16</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $50.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/idelfonso2.jpg" alt="Murales" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/idelfonso3.jpg" alt="Patio Principal" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/idelfonso4.jpg" alt="Anfiteatro" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Considerado la cuna del muralismo mexicano; aquí Rivera pintó su primer mural: "La Creación".</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="ex-teresa" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/teresa1.jpg" alt="Ex Teresa Arte Actual" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Ex Teresa Arte Actual</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/EdjXJjTAJBRN5Jte9" target="_blank" class="link-mapa">Lic. Verdad #8</a></p>
+                            <p><strong>Horario:</strong> Lun a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="exteresa_1.jpg" alt="Cúpula" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="exteresa_2.jpg" alt="Instalación" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="exteresa_3.jpg" alt="Fachada Inclinada" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Observa la evidente inclinación del edificio. Su contraste entre la arquitectura virreinal y el arte contemporáneo es único.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="arquitectura" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/arquitectura1.jpg" alt="Museo de Arquitectura" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio"> INBA Museo Nacional de Arquitectura</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/PdjbwCMtUABJx8or5" target="_blank" class="link-mapa">3er piso, Palacio de Bellas Artes</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $60.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="arqui_1.jpg" alt="Planos" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="arqui_2.jpg" alt="Maqueta" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="arqui_3.jpg" alt="Exhibición" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Ubicado en la cúpula de Bellas Artes, ofrece una visión técnica del urbanismo y los grandes constructores de México.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="mide" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/mide1.jpg" alt="MIDE" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">MIDE</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/nms1w8Qcy2vjzb1y5" target="_blank" class="link-mapa">Tacuba #17</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $120.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 2.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                            <img src="img/cafeteria.png" alt="Cafetería" title="Cafetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/mide2.jpg" alt="Interactivo 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/mide3.jpg" alt="Interactivo 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/mide4.jpg"  alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Excelente ejemplo de arquitectura de adaptación, donde un antiguo convento alberga alta tecnología interactiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="mupe" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/perfume1.jpg" alt="Museo del Perfume" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">MUPE (Museo del Perfume)</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/prASPX3JRMEVSPdw9" target="_blank" class="link-mapa">Tacuba #12</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> $75.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="mupe_1.jpg" alt="Frascos" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="mupe_2.jpg" alt="Esencias" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="mupe_3.jpg" alt="Exhibición" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Una experiencia inmersiva y sensorial; es uno de los pocos museos en México dedicados al olfato.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="archivo-fotografia" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/fotografia1.jpg" alt="Museo Archivo de la Fotografía" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Archivo de la Fotografía</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/qGpagVPk6vJTcEeX9" target="_blank" class="link-mapa">República de Guatemala #34</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="archivo_1.jpg" alt="Foto Antigua" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="archivo_2.jpg" alt="Cámara" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="archivo_3.jpg" alt="Galería" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> La "Casa de las Ajaracas" expone el registro fotográfico de cómo ha evolucionado la ciudad a través del tiempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="arte-popular" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/map1.jpg" alt="MAP" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de Arte Popular (MAP)</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/C5ZBqWk3mSmgvrRy8" target="_blank" class="link-mapa">Revillagigedo #11</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $60.00 MXN (Dom libre).</p>
+                            <p><strong>Recorrido:</strong> 2 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/map2.jpg" alt="Alebrije 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/map3.jpg" alt="Alebrije 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/map4.jpg" alt="Alebrije 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> El edificio es una joya del art déco que antiguamente funcionaba como estación de policía y bomberos.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="caricatura" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/caricatura1.jpg" alt="Museo de la Caricatura" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de la Caricatura</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href=https://maps.app.goo.gl/FUyLzqynDDRYmoHu5 target="_blank" class="link-mapa">Donceles #99</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> $50.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/caricatura2.jpg" alt="Tiras" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/caricatura3.jpg" alt="Humor" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/caricatura4.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Refleja la historia política y social del país a través del humor gráfico. ¡Puedes pedir que te hagan una caricatura!</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="ciudad-mexico" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/cdmx1.jpg" alt="Museo de la Ciudad de México" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de la Ciudad de México</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/PmzC7CsmPPeuJV1aA" target="_blank" class="link-mapa">Pino Suárez #30</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $40.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="ciudad_1.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="ciudad_2.jpg" alt="Exposiciones" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="ciudad_3.jpg" alt="Fuente" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Un hermoso palacio virreinal que en su esquina exterior conserva empotrada una cabeza de serpiente prehispánica.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="mujer" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/mujer1.jpg" alt="Museo de la Mujer" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de la Mujer</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/i7CpvTpKKDKKfJsa9" target="_blank" class="link-mapa">República de Bolivia #17</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $20.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="mujer_1.jpg" alt="Exposición" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="mujer_2.jpg" alt="Documentos" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="mujer_3.jpg" alt="Fachada" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Un espacio fundamental para revisar la historia de México desde la perspectiva de género.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="shcp" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/shcp1.jpg" alt="Museo de Arte de la SHCP" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de Arte de la SHCP</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/5xgWgA7Sokjv8JuA6" target="_blank" class="link-mapa">Moneda #4</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="shcp_1.jpg" alt="Arte 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="shcp_2.jpg" alt="Arte 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="shcp_3.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Ubicado en el Antiguo Palacio del Arzobispado, alberga la colección "Pago en Especie" de artistas mexicanos.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="sitio-sep" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/sitio1.jpg" alt="Museo de Sitio SEP" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo de Sitio SEP</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/7X7pFearwSRKejRKA" target="_blank" class="link-mapa">República de Argentina #28</a></p>
+                            <p><strong>Horario:</strong> Lun a Vie, 9:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="sep_1.jpg" alt="Mural 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="sep_2.jpg" alt="Mural 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="sep_3.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Recorrer sus patios te permite apreciar los extensos murales de Diego Rivera en su contexto original.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="museo-card" id="banco-mexico" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/banco1.jpg" alt="Banco de México" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>    
+                <h3 class="titulo-directorio">Museo del Banco de México</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/on4CZvXgTFgqmAFr5" target="_blank" class="link-mapa">Av. 5 de Mayo #2</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 11:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda"> 
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Casilleros gratuitos">
+                            <img src="img/cafeteria.png" alt="Cafetería" title="Cafetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/banco2.jpg" alt="Interior 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/banco3.jpg" alt="Interior 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/banco4.jpg" alt="Interior 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> El acceso a la bóveda principal es una de las experiencias inmersivas más destacadas del centro.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="estanquillo" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/estanquillo1.jpg" alt="Museo del Estanquillo" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo del Estanquillo</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/atTLCYHE6rC9ksxA7" target="_blank" class="link-mapa">Isabel la Católica #26</a></p>
+                            <p><strong>Horario:</strong> Mié a Lun, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda"> 
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/estanquillo2.jpg" alt="Galería 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/estanquillo3.jpg" alt="Galería 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/estanquillo4.jpg" alt="Galería 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> No olvides subir a la terraza superior; ofrece una de las mejores vistas fotográficas de la calle Madero.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="bellas-artes" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/bellas1.jpg" alt="Palacio de Bellas Artes" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo del Palacio de Bellas Artes</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/ZKctmJr8Hpi8zuf99" target="_blank" class="link-mapa">Eje Central y Av. Juárez</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $90.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/bellas2.jpg" alt="Murales" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/bellas3.jpg" alt="Cúpula Interior" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/bellas4.jpg" alt="Teatro" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Sus pasillos resguardan el circuito de murales más importante del país, firmados por Orozco, Rivera y Siqueiros.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			 <article class="museo-card" id="templo-mayor" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/templo1.jpg" alt="Templo Mayor" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo del Templo Mayor</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/j7UBDCGL2F1eCTKo6" target="_blank" class="link-mapa">Seminario #8</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 9:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> $95.00 MXN (Dom libre).</p>
+                            <p><strong>Recorrido:</strong> 2 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/templo2.jpg" alt="Ruinas" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/templo3.jpg" alt="Monolito" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/templo4.jpg" alt="Museo" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> El recorrido exterior por las ruinas culmina magistralmente con la visualización del monolito de Tlaltecuhtli.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="franz-mayer" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/franz1.jpg" alt="Franz Mayer" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Franz Mayer</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/wYQhJsiG5FJnoevM6" target="_blank" class="link-mapa">Av. Hidalgo #45</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> $100.00 MXN (Mar libre).</p>
+                            <p><strong>Recorrido:</strong> 2 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                            <img src="img/cafeteria.png" alt="Cafetería" title="Cafetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/franz2.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+
+                            <img src="img/franz3.jpg" alt="Libros" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/franz4.jpg" alt="Claustro" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Su claustro central funciona como un oasis urbano acústico que aísla el ruido exterior del Centro Histórico.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="jose-luis-cuevas" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/cuevas1.jpg" alt="Museo José Luis Cuevas" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo José Luis Cuevas</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/s7S5byUAZFc7f7X77" target="_blank" class="link-mapa">Academia #13</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> $20.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="cuevas_1.jpg" alt="La Giganta" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="cuevas_2.jpg" alt="Exposición" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="cuevas_3.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> La escultura "La Giganta", en el centro del patio de este ex-convento, es una de las obras más imponentes de la ciudad.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="kaluz" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/kaluz1.jpg" alt="Kaluz" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Kaluz</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/1HwrMdsd3GP7zAMm7" target="_blank" class="link-mapa">Av. Hidalgo #85</a></p>
+                            <p><strong>Horario:</strong> Mié a Lun, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $60.00 MXN (Mié libre).</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/cafeteria.png" alt="Cafetería" title="Cafetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/kaluz2.jpg" alt="Terraza 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/kaluz3.jpg" alt="Terraza 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/kaluz4.jpg" alt="Fachada" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> El antiguo Hotel de Cortés ofrece ahora una cafetería en la azotea con vista perimetral a la Alameda Central.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="museo-card" id="manuel-tolsa" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/tolsa1.jpg" alt="Museo Manuel Tolsá" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Manuel Tolsá</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/eGMr4a4HUuWyP7Pk7" target="_blank" class="link-mapa">Tacuba #5</a></p>
+                            <p><strong>Horario:</strong> Mié a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $50.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda"> 
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="tolsa_1.jpg" alt="Interior 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="tolsa_2.jpg" alt="Interior 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="tolsa_3.jpg" alt="Interior 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Ubicado en el Palacio de Minería, es la joya máxima de la arquitectura neoclásica en México.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="memoria-tolerancia" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/myt1.jpg" alt="Museo Memoria y Tolerancia" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Memoria y Tolerancia</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/33MHPKibWD9yEPeD6" target="_blank" class="link-mapa">Plaza Juárez, Centro Histórico</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 9:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $115.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 2.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/cafeteria.png" alt="Cafetería" title="Cafetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="myt_1.jpg" alt="Sala Principal" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="myt_2.jpg" alt="Vagón" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="myt_3.jpg" alt="Cubo" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Un espacio crudo y reflexivo, con una de las museografías más modernas y galardonadas del país.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="diego-rivera" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/diego1.jpg" alt="Museo Mural Diego Rivera" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Mural Diego Rivera</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href=https://maps.app.goo.gl/sTukY6Q86QcFFXgy9 target="_blank" class="link-mapa">Balderas y Colón, s/n</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $45.00 MXN.</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="diego_1.jpg" alt="Mural Completo" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="diego_2.jpg" alt="Detalle" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="diego_3.jpg" alt="Fachada" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Resguarda el famoso mural rescatado del antiguo Hotel Prado tras el sismo del 85: "Sueño de una tarde dominical".</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="munal" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/munal1.jpg" alt="MUNAL" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">MUNAL</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/88pjKLWncQsVjkXBA" target="_blank" class="link-mapa">Tacuba #8</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $90.00 MXN (Dom libre).</p>
+                            <p><strong>Recorrido:</strong> 2.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/elevador.png" alt="Accesibilidad" title="Elevador">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/munal2.jpg" alt="Escalera" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/munal3.jpg" alt="Sala" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/munal4.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> La Escalera Monumental es el centro visual del edificio. Presta atención a los detalles de herrería y mármol.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="estampa" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/estampa1.jpg" alt="Estampa" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Nacional de la Estampa</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/hE38NTvP8KzXnZBr8" target="_blank" class="link-mapa">Av. Hidalgo #39</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> $60.00 MXN (Dom libre).</p>
+                            <p><strong>Recorrido:</strong> 45 min aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/estampa2.jpg" alt="Grabado 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/estampa3.jpg" alt="Grabado 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/estampa4.jpg" alt="Grabado 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Un recinto íntimo fundamental para comprender la gráfica y el grabado de los artistas mexicanos.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="culturas-mundo" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/culturas1.jpg" alt="Culturas del Mundo" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Museo Nacional de las Culturas del Mundo</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/7bVK9QN4JJ7DHYgXA" target="_blank" class="link-mapa">Moneda #13</a></p>
+                            <p><strong>Horario:</strong> Mar a Dom, 10:00 - 17:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="culturas_1.jpg" alt="Egipto" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="culturas_2.jpg" alt="Grecia" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="culturas_3.jpg" alt="Japón" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Fue el primer museo de México y es uno de los pocos en América Latina dedicados a culturas de otros continentes.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+			
+			<article class="museo-card" id="palacio-iturbide" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/iturbide1.jpg" alt="Palacio Iturbide" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Palacio de Cultura Banamex</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/jkSH88uyu2JrYe2n9" target="_blank" class="link-mapa">Madero #17</a></p>
+                            <p><strong>Horario:</strong> Lun a Dom, 10:00 - 19:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1 hora aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                            <img src="img/paqueteria.png" alt="Paquetería" title="Paquetería">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="img/iturbide2.jpg" alt="Foto 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/iturbide3.jpg" alt="Foto 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="img/iturbide4.jpg" alt="Foto 3" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Obra cumbre del barroco novohispano. Las exposiciones en su planta baja suelen ser gratuitas.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+			<article class="museo-card" id="medicina" onclick="toggleDetalle(this)">
+                <div class="museo-img-header">
+                    <img src="img/medicina1.jpg" alt="Palacio de la Escuela de Medicina" class="museo-foto">
+                    <div class="click-overlay">VER GALERÍA E INFO ➕</div>
+                </div>
+                <h3 class="titulo-directorio">Palacio de la Escuela de Medicina</h3>
+
+                <div class="museo-detalle">
+                    <div class="museo-info">
+                        <div class="detalles-tecnicos">
+                            <p><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/H1m3D2moyTw1wo9S9" target="_blank" class="link-mapa">República de Brasil #33</a></p>
+                            <p><strong>Horario:</strong> Lun a Dom, 9:00 - 18:00 hrs.</p>
+                            <p><strong>Costo:</strong> Entrada libre.</p>
+                            <p><strong>Recorrido:</strong> 1.5 horas aprox.</p>
+                        </div>
+                        <div class="iconos-servicios">
+                            <img src="img/tienda.png" alt="Tienda" title="Tienda">
+                            <img src="img/banos.png" alt="Baños" title="Sanitarios">
+                        </div>
+                        <div class="galeria-musa">
+                            <img src="medicina_1.jpg" alt="Sala 1" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="medicina_2.jpg" alt="Sala 2" class="foto-mini" onclick="abrirModal(this)">
+                            <img src="medicina_3.jpg" alt="Patio" class="foto-mini" onclick="abrirModal(this)">
+                        </div>
+                        <div class="musa-tip">
+                            <img src="img/explorador.png" alt="Explorador" class="musa-icon-small">
+                            <p><strong>Nota del Explorador:</strong> Antiguo Palacio de la Inquisición, hoy alberga fascinantes colecciones de anatomía y herbolaria.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal-galeria">
+        <span class="cerrar-modal" onclick="cerrarModal()">×</span>
+        <a class="flecha flecha-izq" onclick="cambiarImagen(-1)">❮</a>
+        <a class="flecha flecha-der" onclick="cambiarImagen(1)">❯</a>
+        <img class="modal-contenido" id="imgExpandida">
+    </div>
+
+    <footer>
+        <p>© 2026 Museando | Proyecto de Tesina | Sofía</p>
+    </footer>
+
+    <script>
+        // Función para abrir/cerrar tarjetas
+        function toggleDetalle(elemento) {
+            const detalle = elemento.querySelector('.museo-detalle');
+            detalle.classList.toggle('abierto');
+            const overlay = elemento.querySelector('.click-overlay');
+            if (detalle.classList.contains('abierto')) {
+                overlay.innerHTML = "CERRAR INFO ➖";
+            } else {
+                overlay.innerHTML = "VER GALERÍA E INFO ➕";
+            }
+        }
+
+        // Menú hamburguesa
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => { 
+            nav.classList.toggle('nav-active'); 
+        });
+
+        // Script para enlaces cruzados
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const museoDestino = document.querySelector(window.location.hash);
+                    if (museoDestino) {
+                        toggleDetalle(museoDestino);
+                        const posicionY = museoDestino.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({ top: posicionY, behavior: 'smooth' });
+                    }
+                }, 500); 
+            }
+        });
+        
+        // --- FUNCIONES PARA LA GALERÍA LIGHTBOX CON SLIDER ---
+        let imagenesActuales = []; 
+        let indiceActual = 0;      
+
+        function abrirModal(elementoImagen) {
+            event.stopPropagation();
+            const contenedorGaleria = elementoImagen.closest('.galeria-musa');
+            const todasLasFotos = contenedorGaleria.querySelectorAll('.foto-mini');
+            
+            imagenesActuales = Array.from(todasLasFotos).map(img => img.src);
+            indiceActual = imagenesActuales.indexOf(elementoImagen.src);
+            
+            mostrarImagenModal();
+            document.getElementById("imageModal").style.display = "block";
+        }
+
+        function mostrarImagenModal() {
+            const imgModal = document.getElementById("imgExpandida");
+            imgModal.src = imagenesActuales[indiceActual];
+        }
+
+        function cambiarImagen(direccion) {
+            indiceActual += direccion;
+            if (indiceActual >= imagenesActuales.length) {
+                indiceActual = 0;
+            }
+            if (indiceActual < 0) {
+                indiceActual = imagenesActuales.length - 1;
+            }
+            mostrarImagenModal();
+        }
+
+        function cerrarModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
