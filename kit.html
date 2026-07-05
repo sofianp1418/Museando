@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museando | Tu Kit de Explorador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">MUSEANDO</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="rutas.html">Rutas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="guia.html">Cómo Moverte</a></li>
+            <li><a href="kit.html" class="activo-nav">Tu Kit</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+    </header>
+
+    <main class="container-kit">
+        <section class="intro-kit">
+            <h1>Tu Kit de Exploración</h1>
+            <p class="subtitulo-kit">¡Prepara tu bitácora! Descarga, imprime y arma tu equipo para coleccionar momentos en cada museo del Centro Histórico.</p>
+        </section>
+
+        <div class="grid-kit">
+            <!-- Pasaporte -->
+            <div class="kit-card">
+                <div class="kit-img-caja">
+                    <img src="img/mockup-pasaporte.jpg" alt="Pasaporte Museando" class="kit-img">
+                </div>
+                <h3>Pasaporte Cultural</h3>
+                <p>Formato media carta con información esencial y espacios para tus sellos.</p>
+                <a href="pasaporte_museando.pdf" target="_blank" class="cta-button-kit">📥 Descargar Pasaporte</a>
+            </div>
+
+            <!-- Sellos -->
+            <div class="kit-card">
+                <div class="kit-img-caja">
+                    <img src="img/mockup-sellos.jpg" alt="Planilla de Sellos" class="kit-img">
+                </div>
+                <h3>Planilla de Sellos</h3>
+                <p>Insignias listas para imprimir en papel adhesivo y marcar tus logros.</p>
+                <a href="sellos_museando.pdf" target="_blank" class="cta-button-kit">📥 Descargar Sellos</a>
+            </div>
+
+            <!-- Mapa -->
+            <div class="kit-card">
+                <div class="kit-img-caja">
+                    <img src="img/mockup-mapa.jpg" alt="Mapa Ilustrado Museando" class="kit-img">
+                </div>
+                <h3>Mapa de Bolsillo</h3>
+                <p>Guía cartográfica con la ubicación exacta de los 27 museos del circuito.</p>
+                <a href="mapa_museando.pdf" target="_blank" class="cta-button-kit">📥 Descargar Mapa</a>
+            </div>
+        </div>
+
+        <!-- Sección de Consejos Dinámica -->
+        <section class="tips-impresion">
+            <h2>Consejos del Explorador</h2>
+            <div class="grid-tips">
+                <div class="tip-item">
+                    <span>🎨</span>
+                    <strong>Pasaporte:</strong> Imprime en opalina 120g para darle textura de documento real.
+                </div>
+                <div class="tip-item">
+                    <span>✂️</span>
+                    <strong>Sellos:</strong> Solicita papel Couché Adhesivo en tu centro de copiado.
+                </div>
+                <div class="tip-item">
+                    <span>📸</span>
+                    <strong>Documenta:</strong> ¡Toma fotos de tu pasaporte en los patios de cada museo!
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Museando | Proyecto de Tesina | Sofía NP</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => { nav.classList.toggle('nav-active'); });
+    </script>
+</body>
+</html>

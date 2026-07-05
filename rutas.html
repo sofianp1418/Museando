@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museando | Rutas de Exploración</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">MUSEANDO</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="rutas.html" class="activo-nav">Rutas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="guia.html">Cómo Moverte</a></li>
+            <li><a href="kit.html">Tu Kit</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+    </header>
+
+    <!-- NUEVO HERO BANNER FOTOGRÁFICO -->
+    <section class="hero-rutas">
+        <div class="hero-overlay"></div>
+        <div class="hero-contenido">
+            <h1>Circuitos de Exploración</h1>
+            <p>El Centro Histórico cuenta con una vasta oferta cultural. Selecciona cómo prefieres explorar los recintos hoy: por la temática que más te apasiona o por tu ubicación actual.</p>
+        </div>
+    </section>
+
+    <main class="container-rutas">
+
+        <div class="tabs-navegacion">
+            <button class="btn-tab active" onclick="cambiarFiltro(event, 'tematica')">Por Temática</button>
+            <button class="btn-tab" onclick="cambiarFiltro(event, 'ubicacion')">Por Ubicación</button>
+        </div>
+
+        <div class="wrapper-contenido-rutas">
+            
+            <!-- BLOQUE 1: RUTAS TEMÁTICAS -->
+            <div id="contenedor-tematica" class="bloque-ruta active">
+                <div class="grid-rutas-moderno">
+                    
+                    <div class="tarjeta-ruta-interactiva" data-numero="01">
+                        <div class="tarjeta-badge">Clásico</div>
+                        <span class="subtitulo-circuito">Circuito Temático 01</span>
+                        <h3>Arte Clásico y Pintura</h3>
+                        <p class="ruta-descripcion">Para quienes buscan los cuadros icónicos, el muralismo histórico y los edificios más imponentes.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#bellas-artes" class="tag-museo">Bellas Artes</a>
+                            <a href="directorio.html#munal" class="tag-museo">MUNAL</a>
+                            <a href="directorio.html#diego-rivera" class="tag-museo">Museo Mural Diego Rivera</a>
+                            <a href="directorio.html#san-ildefonso" class="tag-museo">San Ildefonso</a>
+                            <a href="directorio.html#manuel-tolsa" class="tag-museo">Manuel Tolsá</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva" data-numero="02">
+                        <div class="tarjeta-badge">Contemporáneo</div>
+                        <span class="subtitulo-circuito">Circuito Temático 02</span>
+                        <h3>Arte Moderno y Fotografía</h3>
+                        <p class="ruta-descripcion">Un recorrido visual que va desde la gráfica y artesanía hasta la fotografía y la escultura experimental.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#franz-mayer" class="tag-museo">Franz Mayer</a>
+                            <a href="directorio.html#arte-popular" class="tag-museo">Arte Popular (MAP)</a>
+                            <a href="directorio.html#estampa" class="tag-museo">Estampa</a>
+                            <a href="directorio.html#ex-teresa" class="tag-museo">Ex Teresa</a>
+                            <a href="directorio.html#jose-luis-cuevas" class="tag-museo">José Luis Cuevas</a>
+                            <a href="directorio.html#archivo-fotografia" class="tag-museo">Archivo Fotografía</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva" data-numero="03">
+                        <div class="tarjeta-badge">Legado</div>
+                        <span class="subtitulo-circuito">Circuito Temático 03</span>
+                        <h3>Historia y Arqueología</h3>
+                        <p class="ruta-descripcion">Conoce el pasado del país, desde las ruinas prehispánicas hasta la evolución de la sociedad actual.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#templo-mayor" class="tag-museo">Templo Mayor</a>
+                            <a href="directorio.html#culturas-mundo" class="tag-museo">Culturas del Mundo</a>
+                            <a href="directorio.html#museo-mujer" class="tag-museo">Museo de la Mujer</a>
+                            <a href="directorio.html#sitio-sep" class="tag-museo">Sitio SEP</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva" data-numero="04">
+                        <div class="tarjeta-badge">Alternativo</div>
+                        <span class="subtitulo-circuito">Circuito Temático 04</span>
+                        <h3>Sitios Curiosos y Ciencia</h3>
+                        <p class="ruta-descripcion">Experiencias distintas y aprendizajes interactivos ideales para mentes inquisitivas.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#mupe" class="tag-museo">Museo del Perfume</a>
+                            <a href="directorio.html#medicina" class="tag-museo">Medicina</a>
+                            <a href="directorio.html#mide" class="tag-museo">MIDE</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva" data-numero="05">
+                        <div class="tarjeta-badge">Arquitectura</div>
+                        <span class="subtitulo-circuito">Circuito Temático 05</span>
+                        <h3>Colecciones y Edificios</h3>
+                        <p class="ruta-descripcion">Recintos que destacan por la majestuosidad de sus palacios o sus exposiciones de temporada.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#palacio-iturbide" class="tag-museo">Palacio de Iturbide</a>
+                            <a href="directorio.html#estanquillo" class="tag-museo">El Estanquillo</a>
+                            <a href="directorio.html#kaluz" class="tag-museo">Museo Caluz</a>
+                            <a href="directorio.html#banco-mexico" class="tag-museo">Banco de México</a>
+                            <a href="directorio.html#shcp" class="tag-museo">Arte de la SHCP</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva" data-numero="06">
+                        <div class="tarjeta-badge">Reflexión</div>
+                        <span class="subtitulo-circuito">Circuito Temático 06</span>
+                        <h3>Historias que Impactan</h3>
+                        <p class="ruta-descripcion">Espacios dedicados al análisis social, la reflexión humana y la crítica a través del tiempo.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#memoria-tolerancia" class="tag-museo">Memoria y Tolerancia</a>
+                            <a href="directorio.html#caricatura" class="tag-museo">Caricatura</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: RUTAS POR UBICACIÓN -->
+            <div id="contenedor-ubicacion" class="bloque-ruta">
+                <div class="grid-rutas-moderno">
+                    
+                    <div class="tarjeta-ruta-interactiva line-ubicacion" data-numero="01">
+                        <div class="tarjeta-badge badge-geo">Punto de inicio</div>
+                        <span class="subtitulo-circuito">Zona 01</span>
+                        <h3>Alameda Central y Bellas Artes</h3>
+                        <p class="ruta-descripcion">Perfecta si te encuentras cerca del parque central, la Torre Latinoamericana o el Palacio.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#bellas-artes" class="tag-museo">Bellas Artes</a>
+                            <a href="directorio.html#franz-mayer" class="tag-museo">Franz Mayer</a>
+                            <a href="directorio.html#diego-rivera" class="tag-museo">Diego Rivera</a>
+                            <a href="directorio.html#estampa" class="tag-museo">Estampa</a>
+                            <a href="directorio.html#kaluz" class="tag-museo">Museo Caluz</a>
+                            <a href="directorio.html#arte-popular" class="tag-museo">Arte Popular (MAP)</a>
+                            <a href="directorio.html#memoria-tolerancia" class="tag-museo">Memoria y Tolerancia</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva line-ubicacion" data-numero="02">
+                        <div class="tarjeta-badge badge-geo">Plaza Principal</div>
+                        <span class="subtitulo-circuito">Zona 02</span>
+                        <h3>Zócalo y Catedral</h3>
+                        <p class="ruta-descripcion">Ideal para explorar los alrededores de la plaza de la constitución y los recintos hacia el sur.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#templo-mayor" class="tag-museo">Templo Mayor</a>
+                            <a href="directorio.html#archivo-fotografia" class="tag-museo">Archivo Fotografía</a>
+                            <a href="directorio.html#banco-mexico" class="tag-museo">Banco de México</a>
+                            <a href="directorio.html#shcp" class="tag-museo">Arte de la SHCP</a>
+                            <a href="directorio.html#culturas-mundo" class="tag-museo">Culturas del Mundo</a>
+                            <a href="directorio.html#ciudad-mexico" class="tag-museo">Ciudad de México</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva line-ubicacion" data-numero="03">
+                        <div class="tarjeta-badge badge-geo">Corredor Peatonal</div>
+                        <span class="subtitulo-circuito">Zona 03</span>
+                        <h3>Corredor Madero</h3>
+                        <p class="ruta-descripcion">Para quienes caminan directo por la calle más transitada y famosa del Centro Histórico.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#estanquillo" class="tag-museo">El Estanquillo</a>
+                            <a href="directorio.html#palacio-iturbide" class="tag-museo">Palacio de Iturbide</a>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-ruta-interactiva line-ubicacion" data-numero="04">
+                        <div class="tarjeta-badge badge-geo">Calles Históricas</div>
+                        <span class="subtitulo-circuito">Zona 04</span>
+                        <h3>Detrás de Catedral</h3>
+                        <p class="ruta-descripcion">Explora las calles tradicionales del norte como Donceles, Cuba, Tacuba y Justo Sierra.</p>
+                        <div class="lista-recintos-ruta">
+                            <a href="directorio.html#munal" class="tag-museo">MUNAL</a>
+                            <a href="directorio.html#manuel-tolsa" class="tag-museo">Manuel Tolsá</a>
+                            <a href="directorio.html#san-ildefonso" class="tag-museo">San Ildefonso</a>
+                            <a href="directorio.html#medicina" class="tag-museo">Medicina</a>
+                            <a href="directorio.html#museo-mujer" class="tag-museo">Museo de la Mujer</a>
+                            <a href="directorio.html#mupe" class="tag-museo">Museo del Perfume</a>
+                            <a href="directorio.html#sitio-sep" class="tag-museo">Sitio SEP</a>
+                            <a href="directorio.html#ex-teresa" class="tag-museo">Ex Teresa</a>
+                            <a href="directorio.html#jose-luis-cuevas" class="tag-museo">José Luis Cuevas</a>
+                            <a href="directorio.html#caricatura" class="tag-museo">Caricatura</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Museando | Proyecto de Tesina | Sofía NP</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => { nav.classList.toggle('nav-active'); });
+
+        // Cambiar pestañas de rutas
+        function cambiarFiltro(evento, tipo) {
+            document.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.bloque-ruta').forEach(bloque => bloque.classList.remove('active'));
+
+            evento.target.classList.add('active');
+            document.getElementById(`contenedor-${tipo}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

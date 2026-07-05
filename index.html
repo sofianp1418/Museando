@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museando | Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="index.html" class="logo">MUSEANDO</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="activo-nav">Inicio</a></li>
+            <li><a href="rutas.html">Rutas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="guia.html">Cómo Moverte</a></li>
+            <li><a href="kit.html">Tu Kit</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-dinamico">
+            <div class="forma-fondo-1"></div>
+            <div class="forma-fondo-2"></div>
+
+           <div class="hero-texto-wrapper">
+    <div class="etiqueta-hero">Comienza tu recorrido</div>
+    <h1 class="titulo-gigante">Dale un giro a tu <br><span>visita cultural</span></h1>
+    <p class="parrafo-hero">Queremos acompañarte a explorar los museos del Centro Histórico de una forma totalmente nueva y divertida. Descarga tu pasaporte, sigue el mapa y colecciona los sellos de cada recinto que visites.</p>
+    <div class="botones-hero">
+        <a href="kit.html" class="btn-primario">Obtener Pasaporte</a>
+        <a href="directorio.html" class="btn-secundario">Ver Recintos</a>
+    </div>
+</div>
+
+        <div class="hero-visual-wrapper" style="perspective: 1000px;">
+    <div class="collage-polaroid">
+        <!-- Tus imágenes aquí -->
+        <img src="img/map4.jpg" class="foto-polaroid">
+        <img src="img/munal2.jpg" class="foto-polaroid">
+        <img src="img/banco2.jpg" class="foto-polaroid">
+    </div>
+</div>
+        </section>
+
+        <section class="container tutorial-section">
+            <h2 class="section-title">Tu bitácora en 3 pasos</h2>
+            
+            <div class="grid-flex tutorial-grid">
+                <div class="card tutorial-card hover-elevate">
+                    <div class="icono-circular">1</div>
+                    <h3 class="card-title">Prepara tu Kit</h3>
+                    <p class="card-text">Descarga e imprime tu Pasaporte oficial y tu planilla de sellos. Esta será tu credencial principal de explorador.</p>
+                </div>
+                
+                <div class="card tutorial-card hover-elevate">
+                    <div class="icono-circular">2</div>
+                    <h3 class="card-title">Traza tu Ruta</h3>
+                    <p class="card-text">Utiliza nuestro mapa para seleccionar uno de los circuitos culturales diseñados estratégicamente por ubicación.</p>
+                </div>
+                
+                <div class="card tutorial-card hover-elevate">
+                    <div class="icono-circular">3</div>
+                    <h3 class="card-title">Sella y Colecciona</h3>
+                    <p class="card-text">Recorre los museos y al finalizar tu visita, coloca el sello correspondiente en tu pasaporte para registrar tus logros.</p>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Museando | Proyecto de Tesina</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => { 
+            nav.classList.toggle('nav-active'); 
+        });
+    </script>
+</body>
+	
+	<script>
+    document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX / window.innerWidth - 0.5;
+        const mouseY = e.clientY / window.innerHeight - 0.5;
+
+        // Mover los elementos según el mouse
+        const visualWrapper = document.querySelector('.hero-visual-wrapper');
+        const flotante = document.querySelector('.img-flotante-1');
+
+        visualWrapper.style.transform = `translate(${mouseX * 30}px, ${mouseY * 30}px)`;
+        flotante.style.transform = `translate(${mouseX * -50}px, ${mouseY * -50}px)`;
+    });
+</script>
+</html>
