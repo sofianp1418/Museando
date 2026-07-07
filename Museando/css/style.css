@@ -16,7 +16,23 @@ body {
     overflow-x: hidden;
     line-height: 1.5;
 }
+/* Ajustes para el logo */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Para asegurar que se alinee verticalmente con el menú */
+}
 
+.logo-img {
+    height: 50px;       /* Ajusta este valor al tamaño ideal de tu logo */
+    width: auto;        /* Mantiene la proporción original */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre el logo */
+.logo:hover .logo-img {
+    transform: scale(1.05);
+}
 h1, h2, h3 { 
     font-family: 'Playfair Display', serif; 
     color: #DB007D; 
@@ -59,14 +75,16 @@ h1, h2, h3 {
    2. ENCABEZADO, NAVEGACIÓN PRINCIPAL Y MENÚ BURGER
    ========================================================================== */
 header {
-    background-color: #ffffff; 
+    background-color: transparent; /* Antes estaba en #ffffff */
     padding: 1rem 8%; 
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    box-shadow: 0 4px 15px rgba(9, 4, 53, 0.08); 
-    position: sticky; 
+    /* Quitamos el box-shadow para que se vea limpio sobre el video */
+    position: absolute; /* Antes estaba en sticky */
+    width: 100%; /* Obligamos a que cubra de lado a lado */
     top: 0; 
+    left: 0;
     z-index: 1000;
 }
 
@@ -610,7 +628,6 @@ footer {
     .polaroid-1, .polaroid-2, .polaroid-3 { width: 140px; }
 }
 
-
 /* ==========================================================================
    MODAL COMPLEMENTARIO (LIGHTBOX DE GALERÍA)
    ========================================================================== */
@@ -679,6 +696,138 @@ footer {
 .flecha-izq { left: 5%; }
 .flecha:hover { background-color: rgba(9, 4, 53, 0.8); color: #DB007D; }
 
-
 /* Evitar desbordes de imágenes globales */
 img, picture, video { max-width: 100%; display: block; }
+
+/* Contenedor principal a pantalla completa */
+.fullscreen-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centra los botones verticalmente */
+    justify-content: center; /* Centra los botones horizontalmente */
+    overflow: hidden;
+    z-index: 1; /* Protege la sección entera */
+}
+
+/* El video actuando como fondo puro */
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Lo manda al fondo detrás de los botones */
+}
+
+/* El contenedor que ahora solo tiene los botones */
+.hero-texto-wrapper.centrado.solo-botones {
+    position: relative;
+    z-index: 5; /* Asegura que los botones sean clickeables y estén al frente */
+    transition: transform 0.1s ease-out; /* Mantiene el efecto de que floten al mover el mouse */
+}
+
+/* Alineación de los botones */
+.botones-hero.flex-centro {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* --- CORRECCIÓN DEL MENÚ --- */
+header {
+    background-color: #ffffff; /* Fondo blanco sólido para que no se mezcle */
+    padding: 1rem 8%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative; /* Lo regresamos a relativo para que empuje al video hacia abajo y no se encime */
+    width: 100%; 
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(9, 4, 53, 0.08); /* Sombrita para separarlo del video */
+}
+
+/* --- CORRECCIÓN DEL HERO Y VIDEO --- */
+.fullscreen-hero {
+    position: relative;
+    /* Usamos calc para restar el tamaño del menú y que no salga barra de scroll */
+    height: calc(100vh - 80px); 
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: flex-start; /* Alinea el texto a la izquierda */
+    padding: 0 8%;
+    overflow: hidden;
+    z-index: 1; 
+}
+
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que el video cubra todo sin deformarse */
+    z-index: -2; 
+}
+
+.overlay-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(9, 4, 53, 0.8) 0%, rgba(9, 4, 53, 0.2) 100%);
+    z-index: -1;
+}
+
+/* --- TEXTO Y BOTONES --- */
+.hero-texto-wrapper.alineado-izquierda {
+    text-align: left;
+    max-width: 600px; /* Evita que el texto cruce toda la pantalla */
+    z-index: 2;
+}
+
+/* El truco para mandarlos a la esquina inferior izquierda */
+.botones-esquina {
+    position: absolute;
+    bottom: 50px; /* Separación desde abajo */
+    left: 8%; /* Alineado con tu texto (mismo padding) */
+    display: flex;
+    gap: 20px;
+    z-index: 5;
+}
+
+
+@media screen and (max-width: 968px) {
+    /* ... lo que ya tienes aquí ... */
+
+    .fullscreen-hero {
+        height: auto; /* Dejamos que crezca según el texto */
+        min-height: 80vh;
+        padding-top: 60px;
+        padding-bottom: 150px; /* Damos espacio extra abajo para los botones */
+        justify-content: center;
+    }
+
+    .hero-texto-wrapper.alineado-izquierda {
+        text-align: center; /* En celular se lee mejor centrado */
+    }
+
+    /* En celular, acomodamos los botones uno sobre otro al centro o abajo */
+    .botones-esquina {
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%); /* Centra los botones en el celular */
+        flex-direction: column; /* Apila los botones */
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .video-fondo {
+        object-position: center center; /* Fuerza al video a centrarse en el celular */
+    }
+}
