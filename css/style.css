@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ==========================================================================
-   1. SISTEMA DE VARIABLES, RESET Y CONFIGURACI”N GENERAL
+   1. SISTEMA DE VARIABLES, RESET Y CONFIGURACI√ìN GENERAL
    ========================================================================== */
 * { 
     margin: 0; 
@@ -11,7 +11,7 @@
 
 body { 
     font-family: 'Montserrat', sans-serif; 
-    background-color: #FFF7E3; /* Fondo Crema C·lido */
+    background-color: #FFF7E3; /* Fondo Crema C√°lido */
     color: #090435; /* Azul Marino Profundo */
     overflow-x: hidden;
     line-height: 1.5;
@@ -20,12 +20,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    height: 100%; /* Para asegurar que se alinee verticalmente con el men˙ */
+    height: 100%; /* Para asegurar que se alinee verticalmente con el men√∫ */
 }
 
 .logo-img {
-    height: 50px;       /* Ajusta este valor al tamaÒo ideal de tu logo */
-    width: auto;        /* Mantiene la proporciÛn original */
+    height: 50px;       /* Ajusta este valor al tama√±o ideal de tu logo */
+    width: auto;        /* Mantiene la proporci√≥n original */
     transition: transform 0.3s ease;
 }
 
@@ -72,7 +72,7 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
-   2. ENCABEZADO, NAVEGACI”N PRINCIPAL Y MEN⁄ BURGER
+   2. ENCABEZADO, NAVEGACI√ìN PRINCIPAL Y MEN√ö BURGER
    ========================================================================== */
 header {
     background-color: transparent; /* Antes estaba en #ffffff */
@@ -201,7 +201,7 @@ header {
 }
 
 /* ==========================================================================
-   4. SECCI”N: INICIO (INDEX) Y ANIMACIONES CINEM¡TICAS
+   4. SECCI√ìN: INICIO (INDEX) Y ANIMACIONES CINEM√ÅTICAS
    ========================================================================== */
 @keyframes flujoFondo {
     0% { background-position: 0% 50%; }
@@ -315,10 +315,10 @@ header {
     z-index: 10; box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.img-flotante-1 { display: none; /* Ocultamos la br˙jula anterior para dejar limpio el efecto */ }
+.img-flotante-1 { display: none; /* Ocultamos la br√∫jula anterior para dejar limpio el efecto */ }
 
 /* ==========================================================================
-   5. SECCI”N: TUTORIAL DE BIT¡CORA EN 3 PASOS
+   5. SECCI√ìN: TUTORIAL DE BIT√ÅCORA EN 3 PASOS
    ========================================================================== */
 .tutorial-section {
     background-color: #fafafa; padding-top: 100px; padding-bottom: 100px; 
@@ -353,7 +353,7 @@ header {
 .hover-elevate:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
 
 /* ==========================================================================
-   6. SECCI”N: DIRECTORIO CULTURAL
+   6. SECCI√ìN: DIRECTORIO CULTURAL
    ========================================================================== */
 .grid-flex-directorio { 
     display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; 
@@ -404,7 +404,7 @@ header {
 .iconos-servicios img:hover { transform: scale(1.15); }
 
 /* ==========================================================================
-   7. SECCI”N: RUTAS Y CIRCUITOS CULTURALES
+   7. SECCI√ìN: RUTAS Y CIRCUITOS CULTURALES
    ========================================================================== */
 .hero-rutas {
     position: relative; width: 100%; min-height: 45vh; display: flex; align-items: center; justify-content: center;
@@ -481,7 +481,7 @@ header {
 .tag-museo:hover { background: #090435; color: #FFF7E3; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(9, 4, 53, 0.15); }
 
 /* ==========================================================================
-   8. SECCI”N: C”MO MOVERTE (MOVILIDAD URBANA)
+   8. SECCI√ìN: C√ìMO MOVERTE (MOVILIDAD URBANA)
    ========================================================================== */
 .hero-movilidad {
     position: relative; width: 100%; min-height: 45vh; display: flex; align-items: center; justify-content: center;
@@ -533,7 +533,7 @@ header {
 .btn-ecobici { background-color: #00a19a; }
 
 /* ==========================================================================
-   9. SECCI”N: TU KIT (MATERIALES Y CONSEJOS)
+   9. SECCI√ìN: TU KIT (MATERIALES Y CONSEJOS)
    ========================================================================== */
 .container-kit { max-width: 1200px; margin: 60px auto 80px; padding: 0 20px; }
 
@@ -552,7 +552,7 @@ header {
 }
 .kit-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
 
-.kit-img-caja { background-color: #FFF7E3; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.kit-img-caja { background-color: #FFF7E3; border-radius: 12px; padding: 0px; margin-bottom: 20px; }
 .kit-img { width: 100%; height: 180px; object-fit: contain; transition: 0.3s ease; }
 .kit-card:hover .kit-img { transform: scale(1.08); }
 
@@ -580,7 +580,7 @@ footer {
 }
 
 /* ==========================================================================
-   11. MEDIA QUERIES (DISPOSITIVOS M”VILES Y RESPONSIVO)
+   11. MEDIA QUERIES (DISPOSITIVOS M√ìVILES Y RESPONSIVO)
    ========================================================================== */
 @media screen and (min-width: 768px) {
     footer { width: 85%; margin: 50px auto 0; border-radius: 20px 20px 0 0; }
@@ -629,7 +629,7 @@ footer {
 }
 
 /* ==========================================================================
-   MODAL COMPLEMENTARIO (LIGHTBOX DE GALERÕA)
+   MODAL COMPLEMENTARIO (LIGHTBOX DE GALER√çA)
    ========================================================================== */
 .modal-galeria {
     display: none; 
@@ -696,7 +696,7 @@ footer {
 .flecha-izq { left: 5%; }
 .flecha:hover { background-color: rgba(9, 4, 53, 0.8); color: #DB007D; }
 
-/* Evitar desbordes de im·genes globales */
+/* Evitar desbordes de im√°genes globales */
 img, picture, video { max-width: 100%; display: block; }
 
 /* Contenedor principal a pantalla completa */
@@ -708,7 +708,7 @@ img, picture, video { max-width: 100%; display: block; }
     align-items: center; /* Centra los botones verticalmente */
     justify-content: center; /* Centra los botones horizontalmente */
     overflow: hidden;
-    z-index: 1; /* Protege la secciÛn entera */
+    z-index: 1; /* Protege la secci√≥n entera */
 }
 
 /* El video actuando como fondo puro */
@@ -719,17 +719,17 @@ img, picture, video { max-width: 100%; display: block; }
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Lo manda al fondo detr·s de los botones */
+    z-index: -1; /* Lo manda al fondo detr√°s de los botones */
 }
 
 /* El contenedor que ahora solo tiene los botones */
 .hero-texto-wrapper.centrado.solo-botones {
     position: relative;
-    z-index: 5; /* Asegura que los botones sean clickeables y estÈn al frente */
+    z-index: 5; /* Asegura que los botones sean clickeables y est√©n al frente */
     transition: transform 0.1s ease-out; /* Mantiene el efecto de que floten al mover el mouse */
 }
 
-/* AlineaciÛn de los botones */
+/* Alineaci√≥n de los botones */
 .botones-hero.flex-centro {
     display: flex;
     justify-content: center;
@@ -737,9 +737,9 @@ img, picture, video { max-width: 100%; display: block; }
 }
 
 
-/* --- CORRECCI”N DEL MEN⁄ --- */
+/* --- CORRECCI√ìN DEL MEN√ö --- */
 header {
-    background-color: #ffffff; /* Fondo blanco sÛlido para que no se mezcle */
+    background-color: #ffffff; /* Fondo blanco s√≥lido para que no se mezcle */
     padding: 1rem 8%; 
     display: flex;
     justify-content: space-between; 
@@ -750,10 +750,10 @@ header {
     box-shadow: 0 4px 15px rgba(9, 4, 53, 0.08); /* Sombrita para separarlo del video */
 }
 
-/* --- CORRECCI”N DEL HERO Y VIDEO --- */
+/* --- CORRECCI√ìN DEL HERO Y VIDEO --- */
 .fullscreen-hero {
     position: relative;
-    /* Usamos calc para restar el tamaÒo del men˙ y que no salga barra de scroll */
+    /* Usamos calc para restar el tama√±o del men√∫ y que no salga barra de scroll */
     height: calc(100vh - 80px); 
     width: 100%;
     display: flex;
@@ -794,7 +794,7 @@ header {
 /* El truco para mandarlos a la esquina inferior izquierda */
 .botones-esquina {
     position: absolute;
-    bottom: 50px; /* SeparaciÛn desde abajo */
+    bottom: 50px; /* Separaci√≥n desde abajo */
     left: 8%; /* Alineado con tu texto (mismo padding) */
     display: flex;
     gap: 20px;
@@ -803,10 +803,10 @@ header {
 
 
 @media screen and (max-width: 968px) {
-    /* ... lo que ya tienes aquÌ ... */
+    /* ... lo que ya tienes aqu√≠ ... */
 
     .fullscreen-hero {
-        height: auto; /* Dejamos que crezca seg˙n el texto */
+        height: auto; /* Dejamos que crezca seg√∫n el texto */
         min-height: 80vh;
         padding-top: 60px;
         padding-bottom: 150px; /* Damos espacio extra abajo para los botones */
