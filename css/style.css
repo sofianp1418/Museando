@@ -75,17 +75,15 @@ h1, h2, h3 {
    2. ENCABEZADO, NAVEGACIÓN PRINCIPAL Y MENÚ BURGER
    ========================================================================== */
 header {
-    background-color: transparent; /* Antes estaba en #ffffff */
+    background-color: #ffffff; /* Fondo blanco sólido para que no se mezcle */
     padding: 1rem 8%; 
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    /* Quitamos el box-shadow para que se vea limpio sobre el video */
-    position: absolute; /* Antes estaba en sticky */
-    width: 100%; /* Obligamos a que cubra de lado a lado */
-    top: 0; 
-    left: 0;
+    position: relative; /* Lo regresamos a relativo para que empuje al video hacia abajo y no se encime */
+    width: 100%; 
     z-index: 1000;
+    box-shadow: 0 4px 15px rgba(9, 4, 53, 0.08); /* Sombrita para separarlo del video */
 }
 
 .logo { 
@@ -356,7 +354,12 @@ header {
    6. SECCIÓN: DIRECTORIO CULTURAL
    ========================================================================== */
 .grid-flex-directorio { 
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    margin-top: 40px; 
+    align-items: flex-start; /* ? ESTA ES LA MAGIA QUE EVITA QUE SE ESTIREN */
 }
 
 .museo-card {
@@ -532,6 +535,43 @@ header {
 .btn-trolebus { background-color: #0067a0; }
 .btn-ecobici { background-color: #00a19a; }
 
+
+/* 1. Control estricto del icono que causa el error */
+.icono-musa {
+    max-width: 60px; /* Tamaño controlado y unificado */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* 2. Unificación del contenedor de notas */
+.consejos-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px; /* Alineado con el ancho de tu grid de transporte */
+    box-shadow: 0 4px 15px rgba(9, 4, 53, 0.05);
+    border: 1px solid rgba(9, 4, 53, 0.1);
+    text-align: left;
+}
+
+.consejos-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* 3. Mejora la legibilidad de la lista para que no se sienta 'simple' */
+.lista-consejos-urbanos {
+    list-style: none;
+}
+
+.lista-consejos-urbanos li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #DB007D; /* Detalle de color que unifica con el resto del sitio */
+}
 /* ==========================================================================
    9. SECCIÓN: TU KIT (MATERIALES Y CONSEJOS)
    ========================================================================== */
@@ -553,7 +593,7 @@ header {
 .kit-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
 
 .kit-img-caja { background-color: #FFF7E3; border-radius: 12px; padding: 0px; margin-bottom: 20px; }
-.kit-img { width: 100%; height: 180px; object-fit: contain; transition: 0.3s ease; }
+.kit-img { width: 100%; height: 100%; object-fit: contain; transition: 0.3s ease; }
 .kit-card:hover .kit-img { transform: scale(1.08); }
 
 .kit-card h3 { color: #090435; margin-bottom: 10px; font-size: 1.4rem; }
@@ -629,42 +669,46 @@ footer {
 }
 
 /* ==========================================================================
-   MODAL COMPLEMENTARIO (LIGHTBOX DE GALERÍA)
+   MODAL COMPLEMENTARIO (LIGHTBOX DE GALERÍA) - RESPONSIVO
    ========================================================================== */
 .modal-galeria {
-    display: none; 
+    display: none; /* Lo cambiaremos a flex con JS */
     position: fixed; 
     z-index: 2000; 
     left: 0; 
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
+    width: 100vw; 
+    height: 100vh; 
     background-color: rgba(9, 4, 53, 0.95); 
     backdrop-filter: blur(5px);
+    /* Flexbox hace el milagro de centrar perfecto en cualquier pantalla */
+    align-items: center; 
+    justify-content: center;
 }
 
 .modal-contenido {
-    margin: auto; 
     display: block; 
-    width: 90%; 
-    max-width: 800px; 
-    margin-top: 5vh;
-    border: 5px solid #FFCE13; 
-    border-radius: 10px; 
+    max-width: 90vw; /* Nunca será más ancho que el 90% de la pantalla */
+    max-height: 80vh; /* Nunca será más alto que el 80% de la pantalla */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid #FFCE13; 
+    border-radius: 8px; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.8);
     animation: zoomIn 0.3s ease;
 }
 
 .cerrar-modal {
     position: absolute; 
-    top: 20px; 
-    right: 40px; 
+    top: 15px; 
+    right: 25px; 
     color: #FFF7E3; 
-    font-size: 50px; 
+    font-size: 45px; 
     font-weight: bold;
     transition: 0.3s ease; 
     cursor: pointer;
+    z-index: 2010;
 }
 
 .cerrar-modal:hover { 
@@ -676,25 +720,54 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
+/* Ajuste de flechas para que no estorben la foto */
 .flecha {
     cursor: pointer; 
     position: absolute; 
     top: 50%; 
-    width: auto; 
-    padding: 16px; 
-    margin-top: -50px;
+    transform: translateY(-50%); /* Centrado vertical matemático */
     color: #FFCE13; 
     font-weight: bold; 
-    font-size: 40px; 
+    font-size: 30px; 
     transition: 0.3s ease;
-    border-radius: 0 3px 3px 0; 
     user-select: none; 
     text-decoration: none;
+    background-color: rgba(9, 4, 53, 0.6); /* Fondito para que se vean sobre fotos blancas */
+    border-radius: 50%; /* Botones circulares modernos */
+    z-index: 2010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 
-.flecha-der { right: 5%; border-radius: 3px 0 0 3px; }
-.flecha-izq { left: 5%; }
-.flecha:hover { background-color: rgba(9, 4, 53, 0.8); color: #DB007D; }
+.flecha-der { right: 2%; }
+.flecha-izq { left: 2%; }
+
+.flecha:hover { 
+    background-color: #DB007D; 
+    color: #FFF7E3; 
+}
+
+/* MAGIA PARA TELÉFONOS (Media Query) */
+@media screen and (max-width: 768px) {
+    .modal-contenido {
+        max-width: 95vw; /* Aprovechamos más espacio lateral */
+        max-height: 70vh; 
+        border-width: 2px;
+    }
+    .flecha {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    .cerrar-modal {
+        top: 10px;
+        right: 15px;
+        font-size: 40px;
+    }
+}
 
 /* Evitar desbordes de imágenes globales */
 img, picture, video { max-width: 100%; display: block; }
