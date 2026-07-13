@@ -8,28 +8,22 @@
     <link rel="stylesheet" href="css/style.css">
 	
 	<meta name="language" content="ES,EN">
-	<!--esta etiqueta sirve para especificar cual es el didioma que usamos -->
-<meta name="Description" content="Museando Centro Historico CDMX">
-	 <!-- esta etiqueta sirve exclusivamente para que el usuario lo lea como descripción en google -->
-<meta name="Keywords" content="CDMX, museos, centro historico, museando">
-	 
-<meta name="author" content="Sofía Nava, sofianp1418@gmail.com">
-	
-<meta name="copyright" content="Museando">
-
-<meta name="robots" content="Index,Follow"> 
-
-<meta name="google-site-verification" content="LADzCucKd1rZKgJMTLuuKnsMB3RhkdL5uqJF5bVARfE" />
+    <meta name="Description" content="Museando Centro Historico CDMX">
+    <meta name="Keywords" content="CDMX, museos, centro historico, museando">
+    <meta name="author" content="Sofía Nava, sofianp1418@gmail.com">
+    <meta name="copyright" content="Museando">
+    <meta name="robots" content="Index,Follow"> 
+    <meta name="google-site-verification" content="LADzCucKd1rZKgJMTLuuKnsMB3RhkdL5uqJF5bVARfE" />
 	
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <header class="main-header">
         <a href="index.html" class="logo">
-        <img src="img/museando transparente.png" alt="Logo Museando" class="logo-img">
-    </a>
+            <img src="img/museando transparente.png" alt="Logo Museando" class="logo-img">
+        </a>
         <ul class="nav-links">
             <li><a href="index.html" class="activo-nav">Inicio</a></li>
             <li><a href="rutas.html">Rutas</a></li>
@@ -44,19 +38,31 @@
 
     <main class="main-content">
         
-       <section class="fullscreen-hero">
-    
-    <video class="video-fondo" autoplay loop muted playsinline>
-        <source src="src/hero museando.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
+        <section class="fullscreen-hero">
+            
+            <div class="overlay-hero"></div>
+        
+            <video class="video-fondo video-desktop" autoplay loop muted playsinline>
+                <source src="src/carruselweb.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
 
-    <div class="botones-esquina">
-        <a href="kit.html" class="btn-primario">Obtener Pasaporte</a>
-        <a href="directorio.html" class="btn-secundario">Ver Recintos</a>
-    </div>
+            <video class="video-fondo video-movil" autoplay loop muted playsinline>
+                <source src="src/carruselmovil.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
 
-</section>
+            <div class="hero-texto-wrapper alineado-izquierda">
+                <h1 class="titulo-gigante">Dale un giro a tu<br><span>visita cultural</span></h1>
+                <p class="parrafo-hero">Descubre los museos del Centro Histórico de una manera interactiva y a tu propio ritmo.</p>
+            </div>
+        
+            <div class="botones-esquina">
+                <a href="kit.html" class="btn-primario">Obtener Pasaporte</a>
+                <a href="directorio.html" class="btn-secundario">Ver Recintos</a>
+            </div>
+        
+        </section>
 
         <section class="container tutorial-section">
             <h2 class="section-title">Tu bitácora en 3 pasos</h2>
