@@ -91,7 +91,7 @@
         <p>&copy; 2026 Museando | Proyecto de Tesina</p>
     </footer>
 
-    <script>
+  <script>
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
         burger.addEventListener('click', () => { nav.classList.toggle('nav-active'); });
@@ -104,6 +104,15 @@
             if (contenedor) {
                 contenedor.style.transform = `translate(${mouseX * -20}px, ${mouseY * -20}px)`;
             }
+        });
+
+        // NUEVO: Script a prueba de fallos para forzar el Loop de los videos (Especial para Celulares)
+        const videosFondo = document.querySelectorAll('.video-fondo');
+        videosFondo.forEach(video => {
+            video.addEventListener('ended', function() {
+                this.currentTime = 0; // Regresa el video al inicio
+                this.play(); // Lo vuelve a reproducir
+            }, false);
         });
     </script>
 </body>
