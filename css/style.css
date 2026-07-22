@@ -743,7 +743,8 @@ footer {
     
     .nav-active { transform: translateX(0); }
     
-    /* ... (aquí sigue lo demás que ya tienes) ... */
+    .hero-contenido-movilidad h1, .hero-contenido h1, .intro-kit h1 { font-size: 2.4rem; }
+}
 
 @media (max-width: 500px) {
     .section-title { font-size: 2.2rem; margin-bottom: 30px; }
