@@ -9,11 +9,13 @@
     box-sizing: border-box; 
 }
 
-body { 
+html, body { 
     font-family: 'Montserrat', sans-serif; 
-    background-color: #FFF7E3; /* Fondo Crema Cálido */
-    color: #090435; /* Azul Marino Profundo */
-    overflow-x: hidden;
+    background-color: #FFF7E3; 
+    color: #090435; 
+    overflow-x: hidden; /* Esto es clave para que no se mueva a los lados */
+    width: 100%;
+    max-width: 100%;
     line-height: 1.5;
 }
 
@@ -250,7 +252,6 @@ img, picture, video { max-width: 100%; display: block; }
     max-width: 600px; 
     z-index: 5; 
     text-align: left;
-    /* Quitamos animaciones viejas para que no estorben la nueva estructura */
 }
 
 .titulo-gigante {
@@ -293,36 +294,87 @@ img, picture, video { max-width: 100%; display: block; }
    5. SECCIÓN: TUTORIAL DE BITÁCORA EN 3 PASOS
    ========================================================================== */
 .tutorial-section {
-    background-color: #fafafa; padding-top: 100px; padding-bottom: 100px; 
-    border-radius: 30px; margin-top: 60px; width: 100%;
+    background-color: #fafafa;
+    padding-top: 100px; 
+    padding-bottom: 100px; 
+    border-radius: 30px; 
+    margin-top: 60px; 
+    width: 100%;
 }
 
 .section-title {
-    font-size: 3.5rem; margin-bottom: 60px; text-align: center; color: #090435;
+    font-size: 3.5rem; 
+    margin-bottom: 60px; 
+    text-align: center; 
+    color: #090435;
 }
 
 .tutorial-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; padding: 0 40px; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 50px; 
+    padding: 0 40px; 
 }
 
 .tutorial-card {
-    text-align: center; background: white; padding: 60px 40px; border-radius: 20px; border-top: 8px solid; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; 
+    background: white; 
+    padding: 60px 40px; 
+    border-radius: 20px; 
+    border-top: 8px solid; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Colores de los bordes superiores de las tarjetas */
 .tutorial-card:nth-child(1) { border-color: #DB007D; } 
 .tutorial-card:nth-child(2) { border-color: #FFCE13; } 
 .tutorial-card:nth-child(3) { border-color: #090435; } 
 
 .tutorial-card .icono-circular {
-    background-color: currentColor; color: white; width: 90px; height: 90px; line-height: 90px;
-    border-radius: 50%; margin: 0 auto 30px; font-weight: 800; font-size: 2.5rem; 
+    width: 90px; 
+    height: 90px; 
+    line-height: 90px;
+    border-radius: 50%; 
+    margin: 0 auto 30px; 
+    font-weight: 800; 
+    font-size: 2.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.tutorial-card:nth-child(2) .icono-circular { color: #090435; }
 
-.tutorial-card .card-title { color: #090435; margin-bottom: 25px; font-size: 2rem; font-weight: 700; }
-.tutorial-card .card-text { color: #555; font-size: 1.1rem; line-height: 1.8; }
-.hover-elevate:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+/* Colores específicos para cada círculo y sus números */
+.tutorial-card:nth-child(1) .icono-circular { 
+    background-color: #DB007D; 
+    color: #ffffff; 
+} 
+.tutorial-card:nth-child(2) .icono-circular { 
+    background-color: #FFCE13; 
+    color: #090435; 
+} 
+.tutorial-card:nth-child(3) .icono-circular { 
+    background-color: #090435; 
+    color: #ffffff; 
+}
+
+.tutorial-card .card-title { 
+    color: #090435; 
+    margin-bottom: 25px; 
+    font-size: 2rem; 
+    font-weight: 700; 
+}
+
+.tutorial-card .card-text { 
+    color: #555; 
+    font-size: 1.1rem; 
+    line-height: 1.8; 
+}
+
+.hover-elevate:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12); 
+}
 
 /* ==========================================================================
    6. SECCIÓN: DIRECTORIO CULTURAL
@@ -659,23 +711,39 @@ footer {
     /* Ajustes generales de otras páginas */
     .section-title { font-size: 2.8rem; margin-bottom: 40px; }
     .tutorial-grid { padding: 0 20px; gap: 30px; }
-    .tutorial-card { padding: 40px 25px; }
+    .tutorial-card { padding: 40px 25px; } /* Mantenemos el padding para que se vea como tarjeta */
     .tutorial-card .icono-circular { width: 70px; height: 70px; line-height: 70px; font-size: 2rem; margin-bottom: 20px; }
     .tutorial-card .card-title { font-size: 1.8rem; margin-bottom: 15px; }
 }
 
 @media screen and (max-width: 768px) {
     header { padding: 1rem 5%; }
+    
     .nav-links {
-        position: absolute; right: 0; top: 8vh; background: white; width: 100%; height: 92vh;
-        flex-direction: column; align-items: center; padding-top: 40px; transform: translateX(100%); transition: 0.5s ease;
+        position: fixed; /* IMPORTANTE: Fixed evita que estire la página */
+        right: 0; 
+        top: 82px; /* Queda justo debajo de tu menú blanco */
+        background: white; 
+        width: 100%; 
+        height: calc(100vh - 82px);
+        flex-direction: column; 
+        align-items: center; 
+        padding-top: 40px; 
+        transform: translateX(100%); 
+        transition: 0.5s ease;
         box-shadow: -5px 0 15px rgba(9, 4, 53, 0.1);
+        z-index: 999;
     }
-    .burger { display: block; }
+    
+    .burger { 
+        display: block; 
+        position: relative;
+        z-index: 1000;
+    }
+    
     .nav-active { transform: translateX(0); }
     
-    .hero-contenido-movilidad h1, .hero-contenido h1, .intro-kit h1 { font-size: 2.4rem; }
-}
+    /* ... (aquí sigue lo demás que ya tienes) ... */
 
 @media (max-width: 500px) {
     .section-title { font-size: 2.2rem; margin-bottom: 30px; }
@@ -764,4 +832,66 @@ footer {
     .modal-contenido { max-width: 95vw; max-height: 70vh; border-width: 2px; }
     .flecha { font-size: 20px; width: 40px; height: 40px; }
     .cerrar-modal { top: 10px; right: 15px; font-size: 40px; }
+}
+
+/* ==========================================================================
+   SECCIÓN: INSTAGRAM
+   ========================================================================== */
+.instagram-section {
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin: 20px auto 60px;
+    max-width: 900px;
+    padding: 60px 40px;
+    box-shadow: 0 10px 30px rgba(9, 4, 53, 0.05);
+    border-top: 6px solid #DB007D;
+}
+
+.instagram-content h2 {
+    font-size: 2.5rem;
+    color: #090435;
+    margin-bottom: 15px;
+}
+
+.instagram-content p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* Degradado oficial de Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+    color: #ffffff;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 40px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .instagram-content h2 {
+        font-size: 2rem;
+    }
 }
